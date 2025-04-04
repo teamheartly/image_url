@@ -2,6 +2,9 @@ from flask import Flask, send_from_directory
 
 app = Flask(__name__)
 
+@app.route('/test')
+def test():
+    return 'This is test'
 # This route serves images dynamically based on the filename
 @app.route('/image/<filename>')
 def serve_image(filename):
